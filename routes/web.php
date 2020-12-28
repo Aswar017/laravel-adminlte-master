@@ -26,6 +26,8 @@ Route::get('/', function () {
  Route::get('questionnaires/{questionnaire}/questions/create', 'QuestionController@create');
  Route::post('questionnaires/{questionnaire}/questions', 'QuestionController@store');
 
+ Route::get('surveys/{questionnaire}-{slug}', 'SurveyController@show');
+
 Route::get('/product')->name('product.index')->uses('ProductController@index');
 Route::get('/yajra')->name('yajra.index')->uses('ProductController@datatablesIndex');
 
